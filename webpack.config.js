@@ -12,7 +12,7 @@ module.exports = {
   devtool: "eval-source-map",
   devServer: {
     watchFiles: ["./src/template.html"],
-    port: 8080, // وهون تحديد البورت تاع اللوكال هوست
+    port: 8080,//هون تحديد البورت تاع اللوكال هوست
     open: true, // هي مشان يفتح كروم
   },
   plugins: [
@@ -33,6 +33,9 @@ module.exports = {
       {
         test: /\.(png|svg|jpg|jpeg|gif)$/i,
         type: "asset/resource",
+         generator: {
+    filename: 'images/[name][ext]'
+  }
       },
     ],
   },
